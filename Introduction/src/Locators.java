@@ -11,7 +11,7 @@ public class Locators {
 		driver.get("https://www.saucedemo.com/");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		driver.findElement(By.name("password")).sendKeys("secret_sauce");
-		driver.findElement(By.className("btn_action")).click();
+		driver.findElement(By.id("login-button")).click();
 		String afterloginurl = driver.getCurrentUrl();
 		if(afterloginurl.contains("inventory.html")) {
 			System.out.println("Login is successful");
